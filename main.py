@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
+import webbrowser
 
 sns.set_style('whitegrid')
 
@@ -374,3 +375,6 @@ def app():
             f.write(f'<h2>{state}</h2>')
             f.write(f'<iframe src="{state}_map.html" width="100%" height="400px"></iframe>')
         f.write('</body></html>')
+
+ # open index.html in web browser
+    webbrowser.open('file://' + os.path.realpath('index.html'))
